@@ -15,7 +15,7 @@ tags:
 paths:
   
   # Categorias
-  /categoria:
+  /categorias:
     get:
       tags:
       - Categorias
@@ -28,7 +28,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Categoria'
+                  $ref: '#/components/schemas/categorias'
         404:
           description: Nenhuma categoria cadastrada
           content: {}
@@ -44,7 +44,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Categoria'
+              $ref: '#/components/schemas/categorias'
         required: true
       responses:
         201:
@@ -52,12 +52,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Categoria'
+                $ref: '#/components/schemas/categorias'
         500:
           description: Internal Server Error
           content: {}
   
-  /categoria/{id}:
+  /categorias/{id}:
     get:
       tags:
       - Categorias
@@ -75,7 +75,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Categoria'
+                $ref: '#/components/schemas/categorias'
         404:
           description: Nenhuma categoria cadastrada com esse id
           content: {}
@@ -98,7 +98,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Categoria'
+              $ref: '#/components/schemas/categorias'
         required: true
       responses:
         202:
@@ -106,7 +106,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Categoria'
+                $ref: '#/components/schemas/categorias'
         404:
           description: Nenhuma categoria cadastrada com esse id
           content: {}
@@ -131,7 +131,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Categoria'
+                $ref: '#/components/schemas/categorias'
         404:
           description: Nenhuma categoria cadastrada com esse id
           content: {}
@@ -140,7 +140,7 @@ paths:
           content: {}
   
   # Tarefas
-  /tarefa:
+  /tarefas:
     get:
       tags:
       - Tarefas
@@ -153,7 +153,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Tarefa'
+                  $ref: '#/components/schemas/tarefas'
         404:
           description: Nenhuma tarefa cadastrada
           content: {}
@@ -169,7 +169,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Tarefa'
+              $ref: '#/components/schemas/tarefas'
         required: true
       responses:
         201:
@@ -177,13 +177,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tarefa'
+                $ref: '#/components/schemas/tarefas'
         500:
           description: Internal Server Error
           content: {}
           
-  # /tarefa/f/{descricao}:
-  /tarefa?f=descricao:
+  # /tarefas/f/{descricao}:
+  /tarefas?f=descricao:
     get:
       tags:
       - Tarefas
@@ -203,7 +203,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Tarefa'
+                  $ref: '#/components/schemas/tarefas'
         404:
           description: Nenhuma tarefa cadastrada com esse id
           content: {}
@@ -211,7 +211,7 @@ paths:
           description: Internal Server Error
           content: {}
           
-  /tarefa/{id}:
+  /tarefas/{id}:
     get:
       tags:
       - Tarefas
@@ -229,7 +229,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tarefa'
+                $ref: '#/components/schemas/tarefas'
         404:
           description: Nenhuma tarefa cadastrada com esse id
           content: {}
@@ -252,7 +252,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Tarefa'
+              $ref: '#/components/schemas/tarefas'
         required: true
       responses:
         202:
@@ -260,7 +260,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tarefa'
+                $ref: '#/components/schemas/tarefas'
         404:
           description: Nenhuma tarefa cadastrada com esse id
           content: {}
@@ -285,7 +285,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tarefa'
+                $ref: '#/components/schemas/tarefas'
         404:
           description: Nenhuma tarefa cadastrada com esse id
           content: {}
