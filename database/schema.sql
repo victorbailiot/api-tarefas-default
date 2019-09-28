@@ -2,8 +2,8 @@ create database if not exists db_tarefas;
 use db_tarefas;
 
 create table usuarios(
-  id      int             not null auto_increment,
-  email   varchar(200)    not null,  
+  id      int             not null  auto_increment,
+  email   varchar(200)    not null  unique,  
   senha   varchar(200)    not null,
   primary key (id)
 );
