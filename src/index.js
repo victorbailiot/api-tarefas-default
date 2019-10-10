@@ -4,6 +4,10 @@ const app = express()
 const YAML = require('yamljs')
 const swaggerUI = require('swagger-ui-express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
+
+//habilitando o cors
+app.use(cors())
 
 //Transformando o corpo da requisição no formato JSON
 app.use(bodyParser.json())
@@ -21,6 +25,8 @@ app.use('/api/v1/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 //rotas (URN)
 const tarefaRoute = require('./routes/tarefaRoute')
 app.use('/api/v1/tarefas', tarefaRoute)
+const apiRoute = require('.routes/apiRoute')
+app.use('/api/v1', apiRoute)
 
 //porta da aplicação
 const port=process.env.PORT
